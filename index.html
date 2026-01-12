@@ -6,21 +6,17 @@
   <title>wamu | running community</title>
   <meta name="description" content="wamu（輪夢）｜人と人との輪を大切に、夢を追いながらゆるく走るランニングコミュニティ（名古屋・愛知）。" />
 
-  <!-- OGP（SNSでシェアした時の見え方） -->
+  <!-- OGP（必要なら画像を用意して差し替え） -->
   <meta property="og:title" content="wamu | running community" />
   <meta property="og:description" content="人と人との輪を大切に。夢を追いながら、ゆるく走るコミュニティ。" />
   <meta property="og:type" content="website" />
-  <!-- ↓画像を置いたら差し替え（例：assets/ogp.jpg） -->
   <meta property="og:image" content="assets/ogp.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- 既存の styles.css を使う前提（クラス名は大きく崩さず） -->
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- favicon（必要なら assets/favicon.svg を用意） -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
@@ -29,8 +25,7 @@
   <!-- Header -->
   <header class="site-header">
     <a href="#top" class="logo" aria-label="wamu">
-      <!-- ロゴ画像は assets/logo.png などに置くのがおすすめ -->
-      <img src="assets/logo.png" alt="wamu" style="height:40px; width:auto;">
+      <img src="assets/logo.png" alt="wamu logo">
     </a>
 
     <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">☰</button>
@@ -44,13 +39,8 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero（動画なし・白ベース） -->
   <section class="hero" id="top" aria-label="Hero">
-    <!-- 背景動画：ファイル名が違うなら差し替え -->
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
-      <source src="assets/hero.mp4" type="video/mp4">
-    </video>
-
     <div class="hero-inner">
       <h1><span class="brand">wamu</span></h1>
       <p class="tagline">running community</p>
@@ -61,7 +51,6 @@
         <a class="btn ghost" href="#activities">活動を見る</a>
       </div>
 
-      <!-- SNS導線（リンク先が決まったら差し替え） -->
       <div class="hero-links">
         <a class="link" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
         <span class="dot">•</span>
@@ -70,8 +59,6 @@
         <a class="link" href="#contact">Contact</a>
       </div>
     </div>
-
-    <div class="hero-bg" aria-hidden="true"></div>
   </section>
 
   <main>
@@ -133,7 +120,7 @@
       </div>
     </section>
 
-    <!-- Works / Gallery（写真置き場：Tシャツ等でもOK） -->
+    <!-- Goods -->
     <section class="works" id="goods">
       <div class="container">
         <h2>グッズ</h2>
@@ -141,19 +128,16 @@
 
         <div class="grid gallery">
           <figure class="shot">
-            <!-- 例：缶バッジ画像 -->
             <img src="assets/badge.jpg" alt="wamu 缶バッジ（サンプル）">
             <figcaption>缶バッジ（wamu）</figcaption>
           </figure>
 
           <figure class="shot">
-            <!-- 例：Tシャツ画像 -->
             <img src="assets/tshirt.jpg" alt="wamu Tシャツ（サンプル）">
             <figcaption>Tシャツ（wamu）</figcaption>
           </figure>
 
           <figure class="shot">
-            <!-- 例：ロゴ単体 -->
             <img src="assets/logo-mark.png" alt="wamu ロゴ">
             <figcaption>ロゴ / マーク</figcaption>
           </figure>
@@ -184,9 +168,7 @@
               <a class="btn ghost" href="https://www.strava.com/" target="_blank" rel="noopener">Stravaへ</a>
             </div>
 
-            <p class="muted" style="margin-top:10px;">
-              ※リンク先が決まったら差し替えてね（今は仮URL）
-            </p>
+            <p class="muted" style="margin-top:10px;">※リンク先が決まったら差し替えてね（今は仮URL）</p>
           </div>
         </div>
       </div>
@@ -212,8 +194,49 @@
             <h3>フォーム（任意）</h3>
             <p class="muted">SNSが苦手ならフォームでもOK。</p>
 
-            <!-- Formspree：使うなら自分のIDに -->
             <form class="contact-form" action="https://formspree.io/f/xyyvlvno" method="POST">
               <div class="row">
                 <label>お名前<input type="text" name="name" required></label>
                 <label>メール<input type="email" name="email" required></label>
+              </div>
+              <label>内容<textarea name="message" rows="5" placeholder="例）次回の参加方法を知りたい／練習の雰囲気は？／イベントやりたい"></textarea></label>
+              <button class="btn primary" type="submit">送信する</button>
+              <p class="privacy muted">
+                送信で<a href="#" onclick="alert('個人情報はお問い合わせ対応のみに利用し、第三者提供は行いません。'); return false;">プライバシーポリシー</a>に同意したものとします。
+              </p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> wamu</p>
+      <nav><a href="#top">トップへ</a></nav>
+    </div>
+  </footer>
+
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.getElementById("primary-nav");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        nav.classList.toggle("open");
+      });
+      nav.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          toggle.setAttribute("aria-expanded", "false");
+          nav.classList.remove("open");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
