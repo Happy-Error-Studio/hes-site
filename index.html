@@ -4,166 +4,216 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>wamu | running community</title>
-  <meta name="description" content="Happy Error Studio (HES) — Enjoy the Error, Create the Future. 企画・デザイン・運営サポート。" />
+  <meta name="description" content="wamu（輪夢）｜人と人との輪を大切に、夢を追いながらゆるく走るランニングコミュニティ（名古屋・愛知）。" />
+
+  <!-- OGP（SNSでシェアした時の見え方） -->
+  <meta property="og:title" content="wamu | running community" />
+  <meta property="og:description" content="人と人との輪を大切に。夢を追いながら、ゆるく走るコミュニティ。" />
+  <meta property="og:type" content="website" />
+  <!-- ↓画像を置いたら差し替え（例：assets/ogp.jpg） -->
+  <meta property="og:image" content="assets/ogp.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- 既存の styles.css を使う前提（クラス名は大きく崩さず） -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- favicon（必要なら assets/favicon.svg を用意） -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
+
 <body>
-  <!-- 先頭にヘッダー -->
+  <!-- Header -->
   <header class="site-header">
-    <a href="#top" class="logo" aria-label="Happy Error Studio">
-      <img src="BFA9B196-5554-4032-9C45-08AD75BDE047.jpeg" alt="Happy Error Studio" style="height:40px; width:auto;">
+    <a href="#top" class="logo" aria-label="wamu">
+      <!-- ロゴ画像は assets/logo.png などに置くのがおすすめ -->
+      <img src="assets/logo.png" alt="wamu" style="height:40px; width:auto;">
     </a>
-    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
-    <nav class="site-nav" aria-label="Primary">
+
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
       <a href="#about">理念</a>
-      <a href="#services">サービス</a>
-      <a href="#works">実績</a>
-      <a href="#profile">プロフィール</a>
-      <a href="#contact" class="cta">お問い合わせ</a>
+      <a href="#activities">活動</a>
+      <a href="#join">参加方法</a>
+      <a href="#goods">グッズ</a>
+      <a href="#contact" class="cta">連絡</a>
     </nav>
   </header>
 
-  <!-- ヒーロー（見出しセクション） -->
+  <!-- Hero -->
   <section class="hero" id="top" aria-label="Hero">
-    <!-- 背景動画（ヒーロー専用） -->
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-      <source src="6356625-hd_1920_1080_30fps.mp4" type="video/mp4">
+    <!-- 背景動画：ファイル名が違うなら差し替え -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4">
     </video>
 
     <div class="hero-inner">
-      <h1><span class="brand">Happy Error Studio</span></h1>
-      <p class="tagline">Enjoy the Error, Create the Future</p>
-      <p class="sub">小さな“エラー”からはじまる、大きな創造。</p>
+      <h1><span class="brand">wamu</span></h1>
+      <p class="tagline">running community</p>
+      <p class="sub">人と人との輪を大切に。夢を追いながら、ゆるく走るコミュニティ。</p>
+
       <div class="hero-cta">
-        <a class="btn primary" href="#services">できることを見る</a>
-        <a class="btn ghost" href="#contact">相談してみる</a>
+        <a class="btn primary" href="#join">参加してみる</a>
+        <a class="btn ghost" href="#activities">活動を見る</a>
+      </div>
+
+      <!-- SNS導線（リンク先が決まったら差し替え） -->
+      <div class="hero-links">
+        <a class="link" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <span class="dot">•</span>
+        <a class="link" href="https://www.strava.com/" target="_blank" rel="noopener">Strava</a>
+        <span class="dot">•</span>
+        <a class="link" href="#contact">Contact</a>
       </div>
     </div>
+
     <div class="hero-bg" aria-hidden="true"></div>
   </section>
 
-  <!-- 以降はそのまま -->
   <main>
+    <!-- About -->
     <section class="about" id="about">
       <div class="container">
         <h2>理念</h2>
         <p>
-          HESは、失敗や違和感を起点に新しい価値をつくるクリエイティブチームです。
-          バー運営の現場感、会計・税務の実務目線、そしてデザイン思考を横断して、
-          “今あるものを最適化し、まだない体験を設計”します。
+          wamu（輪夢）は、<strong>“輪”</strong>（つながり）と<strong>“夢”</strong>（挑戦）を大切にするランニングコミュニティです。<br>
+          ガチすぎず、でもちゃんと前に進む。<br>
+          「ひとりでは続かない日も、誰かとなら走れる」そんな場所をつくっていきます。
         </p>
+
         <ul class="pill-list">
-          <li>スピード & 実行力</li>
-          <li>現場起点の課題解決</li>
-          <li>数字に強いクリエイティブ</li>
+          <li>ゆるらん歓迎</li>
+          <li>つながり重視</li>
+          <li>それぞれの目標を応援</li>
         </ul>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- Activities -->
+    <section class="services" id="activities">
       <div class="container">
-        <h2>サービス</h2>
+        <h2>活動</h2>
+        <p class="muted">※開催頻度や集合場所は、SNS（Instagram / Strava）で随時告知します。</p>
+
         <div class="grid cards">
           <article class="card">
-            <h3>ブランド設計 / デザイン</h3>
-            <p>ロゴ、ビジュアル、メニュー・ポスター、SNS素材まで。夜のネオンも昼のミニマルも。</p>
+            <h3>コミュラン（ゆるらん）</h3>
+            <p>おしゃべりしながら、気持ちよく。ペースは当日みんなで調整。</p>
             <ul>
-              <li>ロゴ・VI設計</li>
-              <li>ショップツール（メニュー/ポップ）</li>
-              <li>SNSキット</li>
+              <li>初心者OK</li>
+              <li>途中参加・途中離脱OK</li>
+              <li>写真撮って思い出残す</li>
             </ul>
           </article>
+
           <article class="card">
-            <h3>店舗運営サポート</h3>
-            <p>採用導線、シフト設計、原価・人件費の見える化、オペレーション改善を伴走。</p>
+            <h3>ポイント練 / 刺激</h3>
+            <p>目標がある人向けに、無理のない範囲で刺激入れ。メニューは相談して決めます。</p>
             <ul>
-              <li>求人導線/面接設計</li>
-              <li>シフト最適化</li>
-              <li>数値管理テンプレ提供</li>
+              <li>インターバル / テンポ走</li>
+              <li>フォーム・補強も少し</li>
+              <li>ケガしないが最優先</li>
             </ul>
           </article>
+
           <article class="card">
-            <h3>会計・税務の初期整備</h3>
-            <p>開業届/青色申告、科目設計、レシート運用、月次の型づくりまで。</p>
+            <h3>イベント / レース</h3>
+            <p>記録会、駅伝、ハーフ・フルなど。みんなで出ると楽しさ倍。</p>
             <ul>
-              <li>会計ソフト初期設定</li>
-              <li>月次テンプレ/運用ガイド</li>
-              <li>税理士連携サポート</li>
+              <li>大会エントリー相談</li>
+              <li>当日の集合・写真</li>
+              <li>打ち上げ（任意）</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="works" id="works">
+    <!-- Works / Gallery（写真置き場：Tシャツ等でもOK） -->
+    <section class="works" id="goods">
       <div class="container">
-        <h2>実績</h2>
-        <p class="muted">※公開可能な案件のみ掲載。非公開の実績はお問い合わせください。</p>
+        <h2>グッズ</h2>
+        <p class="muted">wamuのアイテムを少しずつ制作中。欲しい人がいたら追加で作っていくスタイル。</p>
+
         <div class="grid gallery">
           <figure class="shot">
-            <img src="assets/sample1.svg" alt="サンプル実績1">
-            <figcaption>メニュー/ポスター刷新（Bar）</figcaption>
+            <!-- 例：缶バッジ画像 -->
+            <img src="assets/badge.jpg" alt="wamu 缶バッジ（サンプル）">
+            <figcaption>缶バッジ（wamu）</figcaption>
           </figure>
+
           <figure class="shot">
-            <img src="assets/sample2.svg" alt="サンプル実績2">
-            <figcaption>SNS運用テンプレ（採用導線）</figcaption>
+            <!-- 例：Tシャツ画像 -->
+            <img src="assets/tshirt.jpg" alt="wamu Tシャツ（サンプル）">
+            <figcaption>Tシャツ（wamu）</figcaption>
           </figure>
+
           <figure class="shot">
-            <img src="assets/sample3.svg" alt="サンプル実績3">
-            <figcaption>原価/人件費ダッシュボード</figcaption>
+            <!-- 例：ロゴ単体 -->
+            <img src="assets/logo-mark.png" alt="wamu ロゴ">
+            <figcaption>ロゴ / マーク</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="profile" id="profile">
+    <!-- Join -->
+    <section class="profile" id="join">
       <div class="container">
-        <h2>プロフィール</h2>
+        <h2>参加方法</h2>
+
         <div class="profile-grid">
-          <img class="avatar" src="assets/avatar.svg" alt="代表の写真（差し替え可）">
+          <img class="avatar" src="assets/join.jpg" alt="ランニングのイメージ（差し替え可）">
+
           <div>
-            <h3>髙槻 亮平</h3>
-            <p class="muted">Founder / Producer</p>
-            <p>
-              日本大学商学部会計学科卒。陸上自衛隊の幹部、自動車・不動産・会計事務所の現場を経て、
-              店舗運営と会計の“リアル”に強いプロデューサー。<br>
-              「現場 × デザイン × 数字」で、持続的に勝てる仕組みをつくります。
+            <h3>はじめての人へ</h3>
+            <p class="muted">“ゆるく”が基本。もちろん目標がある人も歓迎。</p>
+
+            <ol class="steps">
+              <li><strong>Instagram</strong> で最新情報をチェック（開催告知・集合場所）</li>
+              <li><strong>Strava</strong> で活動ログを見る（雰囲気が分かる）</li>
+              <li>当日は<strong>動ける服装</strong>で集合（ドタ参加OKな日もあり）</li>
+            </ol>
+
+            <div class="hero-cta" style="margin-top:16px;">
+              <a class="btn primary" href="https://instagram.com/" target="_blank" rel="noopener">Instagramへ</a>
+              <a class="btn ghost" href="https://www.strava.com/" target="_blank" rel="noopener">Stravaへ</a>
+            </div>
+
+            <p class="muted" style="margin-top:10px;">
+              ※リンク先が決まったら差し替えてね（今は仮URL）
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact -->
     <section class="contact" id="contact">
       <div class="container">
-        <h2>お問い合わせ</h2>
-        <p>まずは課題やイメージをラフに教えてください。48時間以内にご連絡します。</p>
-        <form class="contact-form" action="https://formspree.io/f/xyyvlvno" method="POST">
-          <div class="row">
-            <label>お名前<input type="text" name="name" required></label>
-            <label>メール<input type="email" name="email" required></label>
-          </div>
-          <label>ご相談内容<textarea name="message" rows="6" placeholder="例）採用ページを整えたい／メニュー刷新／会計の初期設定など"></textarea></label>
-          <button class="btn primary" type="submit">送信する</button>
-          <p class="privacy muted">送信で<a href="#" onclick="alert('個人情報はお問い合わせ対応のみに利用し、第三者提供は行いません。'); return false;">プライバシーポリシー</a>に同意したものとします。</p>
-        </form>
-      </div>
-    </section>
-  </main>
+        <h2>連絡</h2>
+        <p>参加希望・質問・コラボなど、気軽にどうぞ。SNSのDMが一番早いです。</p>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Happy Error Studio</p>
-      <nav>
-        <a href="#top">トップへ</a>
-      </nav>
-    </div>
-  </footer>
+        <div class="grid cards" style="margin-top:14px;">
+          <article class="card">
+            <h3>DMで連絡</h3>
+            <p class="muted">ふだんはここでやり取りするのがラク。</p>
+            <div class="hero-cta">
+              <a class="btn primary" href="https://instagram.com/" target="_blank" rel="noopener">Instagram DM</a>
+              <a class="btn ghost" href="https://www.strava.com/" target="_blank" rel="noopener">Strava</a>
+            </div>
+          </article>
 
-  <script src="script.js"></script>
-</body>
-</html>
+          <article class="card">
+            <h3>フォーム（任意）</h3>
+            <p class="muted">SNSが苦手ならフォームでもOK。</p>
+
+            <!-- Formspree：使うなら自分のIDに -->
+            <form class="contact-form" action="https://formspree.io/f/xyyvlvno" method="POST">
+              <div class="row">
+                <label>お名前<input type="text" name="name" required></label>
+                <label>メール<input type="email" name="email" required></label>
