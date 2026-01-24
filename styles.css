@@ -90,7 +90,17 @@ body{
   margin:0 auto;
   text-align:center;
 }
-.tagline{ margin-top: 6px; }
+.hero-logo{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;  /* ロゴとタグラインの間を詰める */
+}
+.hero-logo img{
+  width: clamp(160px, 34vw, 300px); /* 最適サイズ */
+  height: auto;
+  display: block;
+}
 
 .brand{
   font-size: clamp(48px, 10vw, 72px);
@@ -102,7 +112,7 @@ body{
 }
 
 .tagline{
-  margin:10px 0 0;
+  margin:6px 0 0;
   font-weight:800;
   letter-spacing:.08em;
   text-transform:lowercase;
