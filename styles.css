@@ -378,3 +378,10 @@ textarea{ resize: vertical; }
   }
 }
 
+@media (max-width: 768px){
+  .site-nav .cta{
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
