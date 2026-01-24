@@ -321,3 +321,22 @@ textarea{ resize: vertical; }
   }
   .site-nav.open{ display:flex; }
 }
+
+/* join: image + caption */
+.media{
+  width: 180px; /* PC時：左カラム幅に合わせる */
+}
+
+.media-caption{
+  margin-top: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* mobile */
+@media (max-width: 900px){
+  .media{
+    width: 100%;
+  }
+}
